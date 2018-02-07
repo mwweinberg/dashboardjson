@@ -59,8 +59,6 @@ youth = exampleData[0][30]
 del exampleData[0]
 
 
-
-
 #creates the json
 for row in exampleData:
     #this is the dict for the entry
@@ -71,7 +69,7 @@ for row in exampleData:
     #so the first entry is the provience and the location
     subDict[csv_type] = row[0]
     #and then the second entry maps a huge number of things in a dict to 'freq'
-    subDict['freq'] = {aging: row[1], agriculture: row[2], animal_protection: row[3], arts_and_culture: row[4], civil_society_cap_build: row[5], disabilities: row[6], disaster_relief: row[7], econ_dev: row[8], edu: row[9], energy: row[10], environ: row[11], ethnic_affair: row[12], gender_issues: row[13], health: row[14], infrastructure: row[15], int_relations: row[16], labor: row[17], law_governance: row[18], lgbtq: row[19], media: row[20], migrants: row[21], poverty: row[22], religion: row[23], rural: row[24], sport: row[25], tech: row[26], tourism: row[27], trade: row[28], urban: row[29], youth: row[30]}
+    subDict['freq'] = {aging: int(row[1]), agriculture: int(row[2]), animal_protection: int(row[3]), arts_and_culture: int(row[4]), civil_society_cap_build: int(row[5]), disabilities: int(row[6]), disaster_relief: int(row[7]), econ_dev: int(row[8]), edu: int(row[9]), energy: int(row[10]), environ: int(row[11]), ethnic_affair: int(row[12]), gender_issues: int(row[13]), health: int(row[14]), infrastructure: int(row[15]), int_relations: int(row[16]), labor: int(row[17]), law_governance: int(row[18]), lgbtq: int(row[19]), media: int(row[20]), migrants: int(row[21]), poverty: int(row[22]), religion: int(row[23]), rural: int(row[24]), sport: int(row[25]), tech: int(row[26]), tourism: int(row[27]), trade: int(row[28]), urban: int(row[29]), youth: int(row[30])}
 
     #once the entry for this entry is complete, add it to the json
     jsonList.append(subDict)
